@@ -7,7 +7,11 @@
 <body>
     <h1>Ascii Validator</h1>
     {% if input_text %}
-    <textarea name="text_field" rows="35" cols="50">{{ input_text }}</textarea>
+    <form action="/result" method="POST" name="text_form" id="txt_form">
+        Review your text:
+        <input type="submit" value="Submit">
+    </form>
+    <textarea name="text_field" rows="35" cols="50" form="txt_form">{{ input_text }}</textarea>
     <h3>Summary of characters:</h3>
     {% for key, value in bad_chars %}
         <p>{{value}} in position {{key}}</p>

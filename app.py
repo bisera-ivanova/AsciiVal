@@ -27,8 +27,15 @@ def check_ascii(testable_string):
     return bad_chars
 
 
-@app.route("/result")
+@app.route("/result", methods=["GET", "POST"])
 def result():
+    if request.method == "POST":
+        input_text = request.form["text_field"]
+        bad_chars = check_ascii(input_text)
+
+        session['input_text'] = input_text
+        session['bad_chars'] = bad_chars
+
     if len(session['bad_chars']) > 0:
         return render_template('result.html', bad_chars=session['bad_chars'].items(), input_text=session['input_text'])
     else:
