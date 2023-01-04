@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation result</title>
+</head>
+<body>
+    <h1>Ascii Validator</h1>
+    {% if input_text %}
+    <textarea name="text_field" rows="35" cols="50">{{ input_text }}</textarea>
+    <h3>Summary of characters:</h3>
+    {% for key, value in bad_chars %}
+        <p>{{value}} in position {{key}}</p>
+    {% endfor %}
+
+    {% endif %}
+</body>
+</html>

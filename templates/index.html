@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>ASCII Validator</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <h1>Ascii Validator</h1>
     <p>Please input your text and get the textbox:</p>
-    {% if input_text %}
-    <p>{{ input_text }}</p>
-    <p>{{ bad_chars }}</p>
-    {% endif %}
-    <form action="/" method="POST" name="text_form">
-        <label for="input"> Please enter your text!</label>
-        <input type="text" id="input" name="input_text">
+
+    <form action="/" method="POST" name="text_form" id="txt_form">
+        Please enter your text!
         <input type="submit" value="Submit">
     </form>
+    <textarea name="text_field" rows="35" cols="50" form="txt_form"></textarea>
 </body>
 </html>
