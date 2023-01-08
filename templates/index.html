@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>ASCII Validator</title>
     <link rel="stylesheet" href="static/style.css">
+
 </head>
 <body>
     <h1>Ascii Validator</h1>
-    <p>Please input your text in the textbox for checking:</p>
+    <h4>The program will return a list of non-Ascii characters and their positions in the text, starting from 0.
+        Input your text in the textbox for checking:</h4>
 
     <form action="/" method="POST" name="text_form" id="txt_form">
-        Please enter your text!
-        <input type="submit" value="Submit">
+        <label>Please enter your text! </label>
+        <input type="submit" value="Submit" class="form_button">
     </form>
-    <textarea name="text_field" rows="35" cols="50" form="txt_form"></textarea>
+    <textarea name="text_field" rows="50" cols="80" form="txt_form"></textarea>
 </body>
 </html>

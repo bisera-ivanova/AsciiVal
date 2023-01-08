@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
     <title>Validation result</title>
+
 </head>
 <body>
 <h1>Ascii Validator</h1>
-    <h3>There are no non-ASCII characters found</h3>
+    <h3 class="no_chars">There are no non-ASCII characters found</h3>
 
     <form action="/result" method="POST" name="text_form" id="txt_form">
-        Review your text:
-        <input type="submit" value="Submit">
+        <label>Review your text:</label>
+        <input type="submit" value="Submit" class="form_button">
     </form>
-    <textarea name="text_field" rows="35" cols="50" form="txt_form">{{ input_text }}</textarea>
+    <textarea name="text_field" rows="50" cols="80" form="txt_form" >{{ input_text }}</textarea>
 </body>
 </html>
